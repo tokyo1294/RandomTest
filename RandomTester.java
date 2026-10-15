@@ -1,5 +1,6 @@
 import java.util.Random;
-import java.util.ArrayList;
+import java.util.ArrayList; 
+
 /**
  * Write a description of class Random here.
  *
@@ -39,10 +40,25 @@ public class RandomTester
    
    // question 6
    public String getResponse(){
-       ArrayList<String>Responses = new ArrayList<>();
-       Responses.add("yes");
-       Responses.add("no");
-       Responses.add("maybe");
+       ArrayList<String>responses = new ArrayList<>();
+       responses.add("yes");
+       responses.add("no");
+       responses.add("maybe");
+       int index = generator.nextInt(responses.size()); // question 7
+       return responses.get(index);
    }
-   
-}  
+   //question 8 
+   public int getUpToMax(int max){
+       int random = generator.nextInt(max);
+       return random+1;
+   }
+   public int getUpToMax2(int max){
+       int random = generator.nextInt(max);
+       return random+1;
+    }
+   public int getinRange(int min, int max){
+       int random = generator.nextInt(max - min +1);
+       return random+min;
+   }
+}
+ 
